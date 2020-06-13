@@ -1,0 +1,120 @@
+@mixin pride-gradient {
+  background: linear-gradient(270deg,
+    $red,
+    $orange,
+    $yellow,
+    $green,
+    $blue,
+    $purple
+  );
+  background-size: 800% 800%;
+  animation: prideWave 20s ease infinite;
+  transition: background 0.5s ease-in-out;
+}
+
+@keyframes prideWave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@mixin social-button($border-color, $hover-bg) {
+  border: 1px solid $border-color;
+  color: $border-color;
+  &:hover {
+    background: $hover-bg;
+    color: $white !important;
+    i {
+      color: $white !important;
+    }
+  }
+}
+
+@mixin work-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .work {
+    border: 1px solid $maincolor;
+    width: 30%;
+    overflow: hidden;
+    margin: 10px 8px 10px 16px;
+    position: relative;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background-color:	rgba(0,0,0,0.7);
+      transition: all 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .inside {
+      margin: 12px;
+      color: $white;
+
+      .description {
+        margin: 12px 0;
+      }
+
+      p {
+        margin-bottom: 0;
+        line-height: 1.2;
+        font-size: $fontSmall;
+      }
+
+      .tech-tags {
+        position: absolute;
+        bottom: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 4px;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .tech-tag {
+        background-color: $white;
+        color: $black;
+        padding: 2px 8px;
+        border-radius: 15px;
+        font-size: $fontSmallest;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.1s;
+
+        &:hover {
+          background-color: $black;
+          color: $white;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+

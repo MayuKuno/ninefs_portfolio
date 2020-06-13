@@ -1,0 +1,45 @@
+.contents-getInTouch {
+  margin-bottom: 60px;
+}
+
+.getInTouch-message {
+  font-size: $fontLarge;
+  line-height: 1.5em;
+  width: 80%;
+  margin: 0 auto 70px;
+  text-align: center;
+  background-color: $white;
+}
+
+.snsbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 36px;
+  margin-left: -40px;
+
+  li {
+    margin: 0 18px;
+    list-style: none;
+  }
+
+  .sns-btn {
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    font-size: $fontMedium;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.mail    { @include social-button($orange, $orange); font-size: $fontLarger; }
+.git     { @include social-button($git, $git); font-size: $fontLarger; }
+.linkedin { @include social-button($linkedin, $linkedin); font-size: $fontMedium; }

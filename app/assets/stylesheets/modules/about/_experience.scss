@@ -1,0 +1,78 @@
+.contents-experience{
+  margin: 10px 0 150px;
+  height: 100%;
+  min-height: 620px;
+  margin-bottom: 62px;
+  background-color: $white;
+}
+
+.timeline {
+  list-style: none;
+  margin: 40px 0 30px 120px;
+  padding-left: 30px;
+  width: 83%;
+  border-left: 8px solid #eee9dc;
+
+  > li {
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  &__title {
+    font-size: $fontMedium;
+    font-weight: bold;
+    border-bottom: 1.5px solid $maincolor;
+    padding-bottom: 5px;
+
+    .badge {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: $fontSmall;
+      font-weight: bold;
+      color: $white;
+    }
+
+    .current { background: $orange; }
+    .main    { background: #007acc; }
+    .sub     { background: $purple; }
+
+    .icon { margin-right: 10px; }
+  }
+
+  &__date {
+    position: absolute;
+    top: 50%;
+    left: -140px;
+    margin-top: -10px;
+    font-size: $fontMedium;
+    line-height: 20px;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: -44px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background: $maincolor;
+    border: 5px solid #eee9dc;
+    border-radius: 50%;
+  }
+
+  &__description {
+    padding-top: 5px;
+    font-size: $fontSmall;
+  }
+
+  &__skills {
+    font-size: $fontSmall;
+    margin-top: 24px;
+
+    h4 {
+      margin-left: 8px;
+      margin-bottom: 8px;
+    }
+  }
+}

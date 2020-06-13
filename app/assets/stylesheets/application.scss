@@ -1,0 +1,19 @@
+@import "font-awesome";
+
+//config
+@import "config/color";
+@import "config/font";
+
+// 1280px×1024px対応
+@import "modules/common/common";
+@import "modules/work/index";
+@import "modules/work/show";
+@import "modules/about/index";
+@import "modules/home/index";
+
+// スマホ対応（〜768px）
+@import "breakpoints/modules/common/common";
+@import "breakpoints/modules/work/index";
+@import "breakpoints/modules/work/show";
+@import "breakpoints/modules/about/index";
+@import "breakpoints/modules/home/index";

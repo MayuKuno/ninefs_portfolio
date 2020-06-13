@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .contents-hero {
+    margin: 20px 0 40px;
+  }
+
+  .hero-message {
+    font-size: $fontMedium;
+    line-height: 1.5em;
+    width: 80%;
+    margin: 0 auto 20px;
+    background-color: $white;
+
+    .pride-mode & #queer {
+      background: linear-gradient(90deg,
+        $red, $orange, $yellow,
+        $green, $blue, $purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .hero-photo img {
+    display: block;
+    width: 100%;
+  }
+}

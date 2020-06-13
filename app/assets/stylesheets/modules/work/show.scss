@@ -1,0 +1,221 @@
+
+.contents-work-show {
+  background-color: white;
+}
+
+.show-image {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  .title {
+    width: 800px;
+    height: 40px;
+    font-size: 40px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .image {
+    margin: 0 auto;
+    height: auto;
+    width: 80%;
+    margin-top: 44px;
+    position: relative;
+    img {
+      width: 80%;
+      border: 1px solid $maincolor;
+    }
+    .like-section{
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      margin-bottom: 8px;
+      .like-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .like-button:hover {
+        background-color: #e0e0e0;
+      }
+      
+      .liked-icon {
+        color: #F22952;
+      }
+      
+      .unlike-icon {
+        color: #666;
+      }
+    }
+    .img-slider {
+      position: relative;
+      max-width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    
+    .prev {
+      left: 10px;
+    }
+    
+    .next {
+      right: 10px;
+    }
+    
+  }
+}
+
+.show-description {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+
+  .description-wrapper {
+    font-size: $fontSmaller;
+    display: flex;
+    border: solid 1px #dce4ec;
+    margin: 2em 0 1em;
+    padding: 8px 24px;
+    border-radius: 4px;
+    min-height: 420px;
+    position: relative;
+
+    .table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0px 10px;
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  
+    .tech-tag {
+      background-color: #f0f0f0;
+      color: #333;
+      padding: 2px 8px;
+      border-radius: 15px;
+      font-size: $fontSmallest;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 18px;
+      font-weight: bold;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-color 0.2s, transform 0.1s;
+      cursor: pointer;
+    }
+    
+    .tech-tag:hover {
+      background-color: #333;
+      color: white;
+      transform: scale(1.05);
+    }
+    
+    tr {
+      text-align: left;
+      th {
+        font-weight: bold;
+        margin-right: 10px;
+        width: 20%;
+      }
+      .overview {
+        height: 80px;
+      }
+      .tech-stack {
+        height: 80px;
+      }
+      .features {
+        height: 80px;
+      }
+      td {
+        width: 80%;
+      }  
+    }
+
+    .links{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex
+    }
+
+    .readme {
+      margin-right: 12px;
+
+    }
+
+    .link a {
+      background: #eee;
+      text-decoration: none;
+      border-radius: 3px;
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 280px;
+      padding: 10px 25px;
+      color: $maincolor;
+      transition: 0.3s ease-in-out;
+      font-weight: 500;
+  }
+
+  .link a:hover {
+      background: $maincolor;
+      color: #FFF;
+  }
+
+  .link i {
+    margin-left: 12px;
+  }
+  }
+}

@@ -1,0 +1,7 @@
+.contents-work {
+  margin-bottom: 60px;
+}
+
+.work-list{
+  @include work-list;
+}

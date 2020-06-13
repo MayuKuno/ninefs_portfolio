@@ -1,0 +1,11 @@
+@import "../shared/mixins";
+@import "self";
+@import "experience";
+@import "certification";
+
+.about-title {
+  border-bottom: 2px solid $maincolor;
+  padding-bottom: 15px;
+  width: 300px;
+  font-size: $fontMedium;
+}
