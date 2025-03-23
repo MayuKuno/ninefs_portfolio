@@ -1,24 +1,31 @@
-# 🧑‍💻 My Developer Portfolio
+# My Developer Portfolio
 
 This is my personal developer portfolio, built with **Ruby on Rails**.  
-It showcases my skills as a full-stack engineer through a clean, approachable UI and well-structured project highlights.
 
-## 🚀 Features
+## Pages
 
-- 🧑 About Me: A short self-introduction and career background
-- 🧩 Works: A list of selected personal works, with tech stacks and highlights
-- 📬 Contact: A simple form to reach me directly
+- `/` – Home page
+- `/about` – A brief self-introduction and career background (PDF resume available)
+- `/works` – A list of personal projects with tags and highlights
+- `/works?tag={techstack}` – Filtered list of projects by tech stack tag
+- `/works/{id}` – Detailed page for each project
 
-## 🛠 Tech Stack
+## Features
+
+- `Like feature`: Visitors can "like" individual projects to show appreciation.
+- `Tag-based filtering`: Projects can be filtered by tech stacks using tags.
+- `Responsive UI`: Rsponsive design that works smoothly on desktop, and mobile devices.
+- `Pride Mode 🌈`: A fun and inclusive visual theme to celebrate LGBTQ+ pride.
+
+## Tech Stack
 
 | Area         | Technology                         |
 |--------------|-------------------------------------|
-| Framework    | Ruby on Rails 7.1.2                |
-| Language     | Ruby 3.1.4                         |
+| Framework    | Ruby on Rails                      |
+| Language     | Ruby                               |
 | Database     | PostgreSQL                         |
-| CI/CD        | GitHub Actions                     |
 | Hosting      | Render                             |
-| Others       | HTML, CSS, JavaScript              |
+| Others       | HTML, SCSS, JavaScript             |
 
 
 ## Production environment
@@ -40,13 +47,5 @@ It showcases my skills as a full-stack engineer through a clean, approachable UI
 | ---- | 
 |<img width="1440" alt="Screen Shot 2020-10-10 at 19 13 26" src="https://user-images.githubusercontent.com/44453318/95652537-b51d6080-0b2c-11eb-8b92-e7c444db61cc.png">
 |
-
-
-## 🎯 Motivation
-
-I designed and implemented the entire portfolio myself, focusing on:
-- Clean and friendly UI (not too technical or intimidating)
-- Highlighting both frontend and backend experience
-- Showing growth and continuous learning through real projects
 
 
