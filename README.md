@@ -33,19 +33,7 @@ This is my personal developer portfolio, built with **Ruby on Rails**.
 *Note: It may take a few seconds to load due to Render's free plan.*
 
 ## Screenshots
-|  Top page  |  
-| ---- | 
-|<img width="1440" alt="Screen Shot 2020-10-10 at 12 18 24" src="https://user-images.githubusercontent.com/44453318/95652142-01b36c80-0b2a-11eb-8d06-6e4e2c62fee6.png">|
- 
 
-|  About page  |  
-| ---- | 
-|<img width="1440" alt="Screen Shot 2020-10-10 at 18 55 09" src="https://user-images.githubusercontent.com/44453318/95652168-2871a300-0b2a-11eb-9bc4-85d59c43be3f.png">|
-
-
-|  Work page  |  
-| ---- | 
-|<img width="1440" alt="Screen Shot 2020-10-10 at 19 13 26" src="https://user-images.githubusercontent.com/44453318/95652537-b51d6080-0b2c-11eb-8b92-e7c444db61cc.png">
-|
-
-
+![portfolio_demo](https://github.com/user-attachments/assets/91bad5ad-4850-449d-bab4-fab72e56a27c)
+![portfolio_demo3](https://github.com/user-attachments/assets/d7e2b9e7-c1d4-4de6-bd04-2b18a5da1efd)
+![Screenshot 2025-03-23 at 21 49 51](https://github.com/user-attachments/assets/8d37b8ab-e861-48f1-a5d8-dae835fa06ba)
