@@ -1,15 +1,29 @@
-# Project Title
-Portfolio/Blog
+# 🧑‍💻 My Developer Portfolio
 
-## Project Overview
-九野真優のポートフォリオ/情報発信プラットフォーム
+This is my personal developer portfolio, built with **Ruby on Rails**.  
+It showcases my skills as a full-stack engineer through a clean, approachable UI and well-structured project highlights.
+
+## 🚀 Features
+
+- 🧑 About Me: A short self-introduction and career background
+- 🧩 Works: A list of selected personal works, with tech stacks and highlights
+- 📬 Contact: A simple form to reach me directly
+
+## 🛠 Tech Stack
+
+| Area         | Technology                         |
+|--------------|-------------------------------------|
+| Framework    | Ruby on Rails 7.1.2                |
+| Language     | Ruby 3.1.4                         |
+| Database     | PostgreSQL                         |
+| CI/CD        | GitHub Actions                     |
+| Hosting      | Render                             |
+| Others       | HTML, CSS, JavaScript              |
+
 
 ## Production environment
-[サイトへ](https://ninefsblog.herokuapp.com/)
-
-
-## Motivation
-情報発信プラットフォームです。自分自身の成長記録であると同時にと私が持っている情報を必要としている人々に提供するプラットフォームを設けたく作成しました。
+[View the website](https://ninefs-portfolio.onrender.com/)
+*Note: It may take a few seconds to load due to Render's free plan.*
 
 ## Screenshots
 |  Top page  |  
@@ -27,22 +41,12 @@ Portfolio/Blog
 |<img width="1440" alt="Screen Shot 2020-10-10 at 19 13 26" src="https://user-images.githubusercontent.com/44453318/95652537-b51d6080-0b2c-11eb-8b92-e7c444db61cc.png">
 |
 
-|  Blog page  |  
-| ---- | 
-|<img width="1440" alt="Screen Shot 2020-10-10 at 19 14 30" src="https://user-images.githubusercontent.com/44453318/95652559-f57cde80-0b2c-11eb-8cae-726cedc6dbd9.png">|
 
-|  Admin page  |  
-| ---- | 
-|<img width="1440" alt="Screen Shot 2020-10-10 at 19 15 12" src="https://user-images.githubusercontent.com/44453318/95652560-fa419280-0b2c-11eb-8147-d04d04bbdc58.png">|
+## 🎯 Motivation
 
- 
-
-## Authors
-**Mayu Kuno** 
-　- [Github](https://github.com/MayuKuno)
-　- [Portfolio](https://ninefsblog.herokuapp.com/)
+I designed and implemented the entire portfolio myself, focusing on:
+- Clean and friendly UI (not too technical or intimidating)
+- Highlighting both frontend and backend experience
+- Showing growth and continuous learning through real projects
 
 
-## Function/features to improve
-- 全体的なデザインのブラッシュアップ
-- リッチテキストエディタ
