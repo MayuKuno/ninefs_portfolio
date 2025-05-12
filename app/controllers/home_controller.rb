@@ -1,9 +1,5 @@
-  class HomeController < ApplicationController
-    def index
-      @works = Work.published
-    end
+class HomeController < ApplicationController
+  def index
+    @works = published_works
   end
-
-
-
-
+end

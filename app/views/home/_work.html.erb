@@ -1,18 +1,19 @@
 <div class="contents-work">
   <h2 class="contents-title">Works</h2>
   <div class="work-list">
-    <% works.each do |work| %>
+    <% @works.each do |work| %>
       <div class="work">
-        <%= link_to "/works/#{work.id}" do %>
-          <img src="<%= work.main_image.image_url %>" alt="<%= work.title %>">
+        <%= link_to "/works/#{work[:id]}" do %>
+          <% main_image = work[:images].find { |img| img[:is_main] } %>
+          <img src="/images/work/<%= main_image[:image] %>" alt="<%= work[:title] %>">
           <div class="mask">
             <div class="inside">
-              <h2><%= work.title %></h2>
-              <p class="description"><%= work.description %></p>
+              <h2><%= work[:title] %></h2>
+              <p class="description"><%= work[:description] %></p>
               <div class="tech-tags">
-                <% work.tech_stacks.each do |tech| %>
-                  <span class="tech-tag" data-url="<%= works_path(tag: tech.name) %>">
-                    <%= tech.name %>
+                <% work[:tech_stacks].each do |tech| %>
+                  <span class="tech-tag" data-url="<%= works_path(tag: tech[:name]) %>">
+                    <%= tech[:name] %>
                   </span>
                 <% end %>
               </div>

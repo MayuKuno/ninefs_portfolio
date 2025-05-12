@@ -1,0 +1,92 @@
+- id: 1
+  title: My Portfolio
+  description: A personal portfolio showcasing my work, skills, and experience as
+    a software engineer.
+  status: 1
+  readme_url: https://github.com/MayuKuno/ninefs_portfolio
+  website_url: https://ninefs-portfolio.onrender.com/
+  features: '・Like Feature
+
+    ・Tags
+
+    ・Responsive UI
+
+    ・Pride Mode'
+  tech_stacks:
+  - name: Ruby on Rails
+    category: Backend
+  - name: PostgreSQL
+    category: Database
+  - name: Ruby
+    category: Backend
+  - name: Render
+    category: Infrastructure
+  - name: Javascript
+    category: DevOps
+  images:
+  - image: portfolio.png
+    is_main: true
+  - image: portfolio_2.gif
+    is_main: false
+- id: 2
+  title: Pride Frame
+  description: An empowering web app where users can upload photos, add vibrant pride-themed
+    frames, and share their creations on social media.
+  status: 1
+  readme_url: .nan
+  website_url: .nan
+  features: '・Frame Customization
+
+    ・Image Upload & Download
+
+    ・Community Sharing
+
+    ・Like & Explore'
+  tech_stacks:
+  - name: Vue.js
+    category: Frontend
+  - name: TypeScript
+    category: Frontend
+  - name: AWS Lambda
+    category: Infrastructure
+  - name: AWS S3
+    category: Infrastructure
+  - name: AWS API Gateway
+    category: Infrastructure
+  - name: GitHub Actions
+    category: DevOps
+  images:
+  - image: default_image.png
+    is_main: true
+- id: 3
+  title: Secret Santa
+  description: A fun Secret Santa platform where users join groups, chat anonymously,
+    and exchange gifts effortlessly.
+  status: 0
+  readme_url: .nan
+  website_url: .nan
+  features: '・Anonymous Matching
+
+    ・Secret Chat
+
+    ・Group Management'
+  tech_stacks:
+  - name: Node.js
+    category: Backend
+  - name: NestJS
+    category: Backend
+  - name: TypeScript
+    category: Backend
+  - name: PostgreSQL
+    category: Database
+  - name: Redis
+    category: Infrastructure
+  - name: WebSockets
+    category: Infrastructure
+  - name: AWS
+    category: Infrastructure
+  - name: GitHub Actions
+    category: DevOps
+  images:
+  - image: default_image.png
+    is_main: true

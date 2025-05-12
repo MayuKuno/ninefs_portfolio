@@ -1,42 +1,30 @@
 <div class="contents-work-show">
   <div class="show-image">
     <div class="title">
-      <%= @work.title %>
+      <%= @work[:title] %>
     </div>
 
     <div class="image">
-      <div class="like-section">
-        <% if @work.likes.exists?(session_id: session.id.to_s) %>
-          <%= button_to work_like_path(@work), method: :delete, remote: true, class: "like-button unlike" do %>
-            <i class="fas fa-heart liked-icon"></i> 
-            <span id="like-count"><%= @work.likes.count %></span>
-          <% end %>
-        <% else %>
-          <%= button_to work_like_path(@work), method: :post, remote: true, class: "like-button like" do %>
-            <i class="far fa-heart unlike-icon"></i> 
-            <span id="like-count"><%= @work.likes.count %></span>
-          <% end %>
-        <% end %>
-      </div>
-      
+      <!-- like section 削除 -->
+
       <div class="img-slider">
         <div class="slider-wrapper">
-          <% main_image = @work.work_images.find_by(is_main: true) %>
-          <% other_images = @work.work_images.where.not(id: main_image&.id) %>
-      
+          <% main_image = @work[:images].find { |img| img[:is_main] } %>
+          <% other_images = @work[:images].reject { |img| img[:is_main] } %>
+
           <% if main_image %>
             <div class="slide active">
-              <img src="<%= main_image.image.url %>" alt="<%= @work.title %>">
+              <img src="/images/work/<%= main_image[:image] %>" alt="<%= @work[:title] %>">
             </div>
           <% end %>
-      
+
           <% other_images.each do |image| %>
             <div class="slide">
-              <img src="<%= image.image.url %>" alt="<%= @work.title %>">
+              <img src="/images/work/<%= image[:image] %>" alt="<%= @work[:title] %>">
             </div>
           <% end %>
         </div>
-      
+
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
@@ -48,22 +36,20 @@
       <table class="table">
         <tr>
           <th class="overview">Overview</th>
-          <td>
-            <%= @work.description %>
-          </td>
+          <td><%= @work[:description] %></td>
         </tr>
         <tr>
           <th class="tech-stack">Tech Stack</th>
           <td>
             <table class="tech-stack-table">
-              <% @work.tech_stacks.group_by(&:category).each do |category, techs| %>
+              <% @work[:tech_stacks].group_by { |t| t[:category] }.each do |category, techs| %>
                 <tr>
                   <th>・<%= category %></th>
                   <td>
                     <div class="tech-tags">：
                       <% techs.each do |tech| %>
-                        <span class="tech-tag" data-url="<%= works_path(tag: tech.name) %>">
-                          <%= tech.name %>
+                        <span class="tech-tag" data-url="<%= works_path(tag: tech[:name]) %>">
+                          <%= tech[:name] %>
                         </span>
                       <% end %>
                     </div>
@@ -76,21 +62,21 @@
         <tr>
           <th class="features">Features</th>
           <td>
-            <b><%= simple_format(@work.features) %></b>
+            <b><%= simple_format(@work[:features]) %></b>
           </td>
         </tr>        
       </table>
       <div class="links">
         <div class="link readme">
-          <% if @work.readme_url.present? %>
-            <a href="<%= @work.readme_url %>" target="_blank" rel="noopener">View README
+          <% if @work[:readme_url].present? %>
+            <a href="<%= @work[:readme_url] %>" target="_blank" rel="noopener">View README
               <i class="fa-solid fa-chevron-right"></i>
             </a>
           <% end %>
         </div>
         <div class="link website">
-          <% if @work.website_url.present? %>
-            <a href="<%= @work.website_url %>" target="_blank" rel="noopener">View Website
+          <% if @work[:website_url].present? %>
+            <a href="<%= @work[:website_url] %>" target="_blank" rel="noopener">View Website
               <i class="fa-solid fa-chevron-right"></i>
             </a>
           <% end %>

@@ -1,22 +1,25 @@
 class WorksController < ApplicationController
   def index
-    if params[:tag]
-      @works = Work.published
-                .joins(:tech_stacks)
-                .where(tech_stacks: { name: params[:tag] })
-                .distinct
-    else
-      @works = Work.published
-    end    
+    @works = if params[:tag]
+               tagged_works(params[:tag])
+             else
+               published_works
+             end
   end
 
   def show
-    @work = Work.find(params[:id])
-    gon.description = @work.description
+    @work = find_work_by_id(params[:id])
+    if @work
+      gon.description = @work[:description]
+    else
+      redirect_to works_path, alert: "作品が見つかりませんでした"
+    end
   end
 
   private
+
   def work_params
+    # YAMLベースでは基本使わないが残しても可
     params.require(:work).permit(
       :title,
       :description,
@@ -27,6 +30,3 @@ class WorksController < ApplicationController
     )
   end
 end
-
-
-

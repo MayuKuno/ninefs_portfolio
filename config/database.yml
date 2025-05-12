@@ -1,17 +1,6 @@
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-
+# config/database.yml
 development:
-  <<: *default
-  database: ninefs_development
-  username: postgres
-  password: <%= ENV['POSTGRES_PASSWORD'] %>
-  host: localhost
-  port: 5432
+  adapter: null
 
 production:
-  <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
-  pool: 10
+  adapter: null

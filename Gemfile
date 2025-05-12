@@ -11,7 +11,6 @@ gem 'puma', '~> 6.0'
 gem 'sass-rails', '~> 6.0'
 gem 'terser'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem 'pg'
 
 # -----------------------------
 # ✅ フロントエンド関連
