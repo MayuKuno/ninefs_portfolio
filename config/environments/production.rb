@@ -6,7 +6,6 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.assets.js_compressor = :terser
   config.assets.compile = true
-  config.active_storage.service = :local
   config.force_ssl = true
   config.log_level = :debug
   config.log_tags = [ :request_id ]
@@ -22,5 +21,4 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
-  config.active_record.dump_schema_after_migration = false
 end

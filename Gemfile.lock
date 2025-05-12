@@ -102,8 +102,6 @@ GEM
     crass (1.0.6)
     date (3.4.1)
     drb (2.2.1)
-    enum_help (0.0.19)
-      activesupport (>= 3.0.0)
     erubi (1.13.1)
     excon (1.2.5)
       logger
@@ -319,7 +317,6 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   carrierwave
-  enum_help
   fog-aws
   font-awesome-sass
   gon

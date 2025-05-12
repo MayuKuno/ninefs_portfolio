@@ -27,7 +27,6 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'gon'
 gem 'marked-rails'
-gem 'enum_help'
 gem 'nokogiri'
 
 # -----------------------------
