@@ -33,8 +33,8 @@
   description: An empowering web app where users can upload photos, add vibrant pride-themed
     frames, and share their creations on social media.
   status: 1
-  readme_url: .nan
-  website_url: .nan
+  readme_url: https://github.com/MayuKuno/pride-frame
+  website_url: https://dl1mzzuw9wm0m.cloudfront.net/
   features: '・Frame Customization
 
     ・Image Upload & Download
@@ -87,6 +87,8 @@
     category: Infrastructure
   - name: GitHub Actions
     category: DevOps
-  images:
-  - image: default_image.png
+  images: 
+  - image: prideframe.png
     is_main: true
+  - image: prideframe_2.gif
+    is_main: false
