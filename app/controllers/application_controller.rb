@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   private
 
   def works_data
-    Rails.configuration.x.works_data
+    Rails.configuration.x.works_data.call
   end
 
   def published_works

@@ -35,60 +35,33 @@
   status: 1
   readme_url: https://github.com/MayuKuno/pride-frame
   website_url: https://dl1mzzuw9wm0m.cloudfront.net/
-  features: '・Frame Customization
-
-    ・Image Upload & Download
-
-    ・Community Sharing
-
-    ・Like & Explore'
+  features: |-
+    ・Create Pride Profile Pictures  
+    ・Upload Custom Pride Frames  
+    ・Browse and Share in the Gallery
   tech_stacks:
-  - name: Vue.js
-    category: Frontend
-  - name: TypeScript
-    category: Frontend
-  - name: AWS Lambda
-    category: Infrastructure
-  - name: AWS S3
-    category: Infrastructure
-  - name: AWS API Gateway
-    category: Infrastructure
-  - name: GitHub Actions
-    category: DevOps
+    - name: Vue 3
+      category: Frontend
+    - name: TypeScript
+      category: Frontend
+    - name: Vuetify
+      category: Frontend
+    - name: AWS Lambda
+      category: Backend
+    - name: AWS API Gateway
+      category: Backend
+    - name: Amazon S3
+      category: Storage
+    - name: DynamoDB
+      category: Database
+    - name: CloudFront
+      category: Hosting
+    - name: Serverless Framework
+      category: Deployment
+    - name: GitHub Actions
+      category: DevOps
   images:
-  - image: default_image.png
-    is_main: true
-- id: 3
-  title: Secret Santa
-  description: A fun Secret Santa platform where users join groups, chat anonymously,
-    and exchange gifts effortlessly.
-  status: 0
-  readme_url: .nan
-  website_url: .nan
-  features: '・Anonymous Matching
-
-    ・Secret Chat
-
-    ・Group Management'
-  tech_stacks:
-  - name: Node.js
-    category: Backend
-  - name: NestJS
-    category: Backend
-  - name: TypeScript
-    category: Backend
-  - name: PostgreSQL
-    category: Database
-  - name: Redis
-    category: Infrastructure
-  - name: WebSockets
-    category: Infrastructure
-  - name: AWS
-    category: Infrastructure
-  - name: GitHub Actions
-    category: DevOps
-  images: 
-  - image: prideframe.png
-    is_main: true
-  - image: prideframe_2.gif
-    is_main: false
+    - image: prideframe.png
+      is_main: true
+    - image: prideframe_2.png
+      is_main: false
