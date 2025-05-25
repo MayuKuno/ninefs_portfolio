@@ -61,7 +61,7 @@
     - name: GitHub Actions
       category: DevOps
   images:
-    - image: prideframe.png
+    - image: prideframe.gif
       is_main: true
-    - image: prideframe_2.png
+    - image: prideframe_2.gif
       is_main: false
