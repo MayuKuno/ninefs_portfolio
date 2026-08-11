@@ -1,0 +1,26 @@
+---
+import { certificationGroups } from "../data/certifications";
+---
+
+<div class="contents-certification">
+  <div>
+    <h1 class="about-title">Certifications</h1>
+    {certificationGroups.map((group) => (
+      <div class="certifications">
+        <h3>
+          {group.title}
+          {group.sparkle && (
+            <>&nbsp;&nbsp;&nbsp;<small><p class="sparkle">{group.sparkle}</p></small></>
+          )}
+        </h3>
+        <div>
+          {group.badges.map((b) => (
+            <a href={b.credlyUrl} target="_blank" rel="noopener noreferrer">
+              <img class="badge" src={`/images/certificates/${b.badge}`} alt={b.alt} />
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

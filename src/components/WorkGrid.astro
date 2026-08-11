@@ -1,0 +1,11 @@
+---
+import WorkCard from "./WorkCard.astro";
+import { publishedWorks } from "../data/works";
+---
+
+<div class="contents-work">
+  <h2 class="contents-title">Works</h2>
+  <div class="work-list">
+    {publishedWorks.map((work) => <WorkCard work={work} />)}
+  </div>
+</div>

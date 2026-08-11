@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import WorkCard from "../../components/WorkCard.astro";
+import { publishedWorks } from "../../data/works";
+---
+
+<Layout>
+  <div class="contents-work-index">
+    <div class="title" id="work-filter-title"></div>
+    <div class="work-list">
+      {publishedWorks.map((work) => <WorkCard work={work} />)}
+    </div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const tag = params.get("tag");
+    const titleEl = document.getElementById("work-filter-title");
+
+    if (tag) {
+      if (titleEl) {
+        titleEl.textContent = "Works Tagged with ";
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        titleEl.append(span);
+      }
+      document.querySelectorAll<HTMLElement>(".work-list .work").forEach((card) => {
+        const techs = (card.dataset.techs ?? "").split(",");
+        if (!techs.includes(tag)) {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</Layout>

@@ -1,0 +1,30 @@
+---
+import { mainImage, type Work } from "../data/works";
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const main = mainImage(work);
+const techNames = work.tech_stacks.map((t) => t.name).join(",");
+---
+
+<div class="work" data-techs={techNames}>
+  <a href={`/works/${work.id}`}>
+    {main && <img src={`/images/work/${main.image}`} alt={work.title} />}
+    <div class="mask">
+      <div class="inside">
+        <h2>{work.title}</h2>
+        <p class="description">{work.description}</p>
+        <div class="tech-tags">
+          {work.tech_stacks.map((tech) => (
+            <span class="tech-tag" data-url={`/works?tag=${encodeURIComponent(tech.name)}`}>
+              {tech.name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

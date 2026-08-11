@@ -1,0 +1,107 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { works, findWork, mainImage, formatFeatures, type TechStack } from "../../data/works";
+
+export function getStaticPaths() {
+  return works.map((work) => ({
+    params: { id: String(work.id) },
+  }));
+}
+
+const { id } = Astro.params;
+const work = findWork(id!)!;
+
+const main = mainImage(work);
+const otherImages = work.images.filter((img) => !img.is_main);
+
+const techByCategory = new Map<string, TechStack[]>();
+for (const tech of work.tech_stacks) {
+  const list = techByCategory.get(tech.category) ?? [];
+  list.push(tech);
+  techByCategory.set(tech.category, list);
+}
+---
+
+<Layout description={work.description}>
+  <div class="contents-work-show">
+    <div class="show-image">
+      <div class="title">
+        {work.title}
+      </div>
+
+      <div class="image">
+        <div class="img-slider">
+          <div class="slider-wrapper">
+            {main && (
+              <div class="slide active">
+                <img src={`/images/work/${main.image}`} alt={work.title} />
+              </div>
+            )}
+            {otherImages.map((image) => (
+              <div class="slide">
+                <img src={`/images/work/${image.image}`} alt={work.title} />
+              </div>
+            ))}
+          </div>
+
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="show-description">
+      <div class="description-wrapper">
+        <table class="table">
+          <tr>
+            <th class="overview">Overview</th>
+            <td>{work.description}</td>
+          </tr>
+          <tr>
+            <th class="tech-stack">Tech Stack</th>
+            <td>
+              <table class="tech-stack-table">
+                {[...techByCategory.entries()].map(([category, techs]) => (
+                  <tr>
+                    <th>・{category}</th>
+                    <td>
+                      <div class="tech-tags">：
+                        {techs.map((tech) => (
+                          <span class="tech-tag" data-url={`/works?tag=${encodeURIComponent(tech.name)}`}>
+                            {tech.name}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <th class="features">Features</th>
+            <td>
+              <b>{formatFeatures(work.features).map((line) => <p>{line}</p>)}</b>
+            </td>
+          </tr>
+        </table>
+        <div class="links">
+          <div class="link readme">
+            {work.readme_url && (
+              <a href={work.readme_url} target="_blank" rel="noopener">View README
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            )}
+          </div>
+          <div class="link website">
+            {work.website_url && (
+              <a href={work.website_url} target="_blank" rel="noopener">View Website
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

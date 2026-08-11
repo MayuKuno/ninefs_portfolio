@@ -1,0 +1,48 @@
+---
+import { experience } from "../data/experience";
+
+const badgeLabels: Record<string, string> = {
+  current: "Current",
+  main: "Main",
+  sub: "Sub",
+};
+---
+
+<div class="contents-experience">
+  <h1 class="about-title">Experience & Skills</h1>
+  <ul class="timeline">
+    {experience.map((entry) => (
+      <li>
+        <div>
+          <p class="timeline__title">
+            <i class={`fas fa-${entry.icon} icon`}></i>{entry.company}
+            {entry.badges.map((badge) => (
+              <span class={`badge ${badge}`}>{badgeLabels[badge]}</span>
+            ))}
+          </p>
+          <p class="timeline__date">
+            {entry.dateRange.split("\n").map((line, i) => (
+              <>
+                {i > 0 && <br />}
+                {line}
+              </>
+            ))}
+          </p>
+          <p class="timeline__circle"></p>
+          {entry.roles.map((role) => (
+            <>
+              <p class="timeline_role"> {role.role}</p>
+              <p class="timeline__description">{role.description}</p>
+              <div class="timeline__skills">
+                <h4>Skills Gained</h4>
+                <ul>
+                  {role.skillsGained.map((skill) => <li>{skill}</li>)}
+                </ul>
+              </div>
+            </>
+          ))}
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>

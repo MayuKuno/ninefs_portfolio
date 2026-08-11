@@ -1,6 +1,0 @@
-# config/database.yml
-development:
-  adapter: null
-
-production:
-  adapter: null
