@@ -70,7 +70,7 @@ export const works: Work[] = [
   },
   {
     id: 3,
-    title: "How would you step in? (あなたならどう味方する？)",
+    title: "How would you step in?",
     description:
       "A scenario-based learning app about active bystandership and microaggressions. Users read realistic workplace/everyday scenarios, choose how they'd respond, and see feedback on their choice along with how other users answered.",
     status: 1,
