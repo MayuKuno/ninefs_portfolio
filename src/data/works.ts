@@ -89,7 +89,10 @@ export const works: Work[] = [
       { name: "Turso", category: "Database" },
       { name: "Vercel", category: "Hosting" },
     ],
-    images: [{ image: "default1.png", is_main: true }],
+    images: [
+      { image: "activebystander.gif", is_main: true },
+      { image: "activebystander_2.gif", is_main: false },
+    ],
   },
 ];
 
